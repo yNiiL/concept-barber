@@ -1,1 +1,131 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+/* Menu */
+.navbar {
+  background: #002FA7;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Botão */
+.btn {
+  background: #002FA7;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #001f7a;
+}
+
+/* Seções */
+section {
+  padding: 60px 20px;
+}
+
+/* Benefícios do clube */
+.beneficios li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.carousel .slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,47,167,0.7);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+/* Classes adicionadas por detect.js */
+body.desktop .navbar {
+  font-size: 18px;
+}
+
+body.mobile .navbar {
+  font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    background: #002FA7;
+    display: none;
+  }
+  .navbar ul.show {
+    display: flex;
+  }
+}
